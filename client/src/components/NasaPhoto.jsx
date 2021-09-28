@@ -17,15 +17,14 @@ const NasaPhoto = props => {
     return (
         <div>
             {
-                nasaData ? <div>
+                nasaData ? <div className="nasa-photo">
                     {
-                        nasaData.media_type === "image" ? <img src={nasaData.url} alt={nasaData.title}/> : <iframe title="space-video" src={nasaData.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen
-                    />
+                        nasaData.media_type === "image" ? <img src={nasaData.url} alt={nasaData.title} className="photo"/> : <iframe title="space-video" src={nasaData.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen className="photo"/>
                     }
                     <div>
-                        <h3>{nasaData.title}</h3>
-                        <p>{nasaData.date}</p>
-                        <p>{nasaData.explanation}</p>
+                        <h1>{nasaData.title}</h1>
+                        <p className="date">{nasaData.date}</p>
+                        <p className="explanation">{nasaData.explanation}</p>
                     </div>
                 </div> : ""
             }
