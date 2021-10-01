@@ -8,7 +8,7 @@ body {
   font-family: 'Space Mono', monospace;
   color: rgb(235, 81, 96);
   line-height: 1.7;
-  font-size: 19px;
+  font-size: 1em;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("./images/nasa-Q1p7bh3SHj8-unsplash.jpg");
@@ -22,7 +22,8 @@ body {
   margin: 0 auto;
   max-height: 100%;
   background-color: rgba(223,224,226,.3);
-
+  font-family: 'Space Mono', monospace;
+  color: rgb(235, 81, 96);
 }
 
 .nasa-photo img {
@@ -30,16 +31,26 @@ body {
   margin-right: 50px;
   object-fit: contain;
   max-height: 80vh;
+  flex: 1;
+}
+
+.nasa-photo iframe {
+  margin-right: 50px;
+  flex: 1;
+}
+
+.nasa-photo .content {
+  flex: 2;
 }
 
 .nasa-photo h1 {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .nasa-photo .date {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .nasa-photo .explanation {

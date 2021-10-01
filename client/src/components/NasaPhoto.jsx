@@ -10,25 +10,29 @@ const NasaPhoto = props => {
 
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-            .then(res => setNasaData(res.data))
+            .then(res => {
+                setNasaData(res.data);
+                console.log(res.data);
+            })
             .catch(err => console.log(err))
     }, []);
 
     return (
-        <div>
-            {
-                nasaData ? <div className="nasa-photo">
-                    {
-                        nasaData.media_type === "image" ? <img src={nasaData.url} alt={nasaData.title} className="photo"/> : <iframe title="space-video" src={nasaData.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen className="photo"/>
-                    }
-                    <div>
-                        <h1>{nasaData.title}</h1>
-                        <p className="date">{nasaData.date}</p>
-                        <p className="explanation">{nasaData.explanation}</p>
-                    </div>
-                </div> : ""
-            }
-        </div>
+        <>
+        {
+            nasaData ? 
+            <div className="nasa-photo">
+                {nasaData.media_type === "image" ? <img src={nasaData.url} alt={nasaData.title} /> : <iframe title="space-video" src={nasaData.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen/>}
+                <div className="content">
+                    <h1>{nasaData.title}</h1>
+                    <p className="date">{nasaData.date}</p>
+                    <p>Copyright: {nasaData.copyright}</p>
+                    <p className="explanation">{nasaData.explanation}</p>
+                </div>
+            </div> : ""
+        }
+        </>
+        
     )
 }
 
