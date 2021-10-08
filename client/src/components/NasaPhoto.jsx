@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import Navbar from "./Navbar";
+import Favorite from "./Favorite";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
@@ -22,12 +22,13 @@ const NasaPhoto = props => {
         {
             nasaData ? 
             <div className="nasa-photo">
-                {nasaData.media_type === "image" ? <img src={nasaData.url} alt={nasaData.title} /> : <iframe title="space-video" src={nasaData.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen/>}
+                {nasaData.media_type === "image" ? <img src={nasaData.hdurl} alt={nasaData.title} /> : <iframe title="space-video" src={nasaData.hdurl} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen/>}
                 <div className="content">
                     <h1>{nasaData.title}</h1>
                     <p className="date">{nasaData.date}</p>
                     <p>Copyright: {nasaData.copyright}</p>
                     <p className="explanation">{nasaData.explanation}</p>
+                    <Favorite data={nasaData}/>
                 </div>
             </div> : ""
         }
