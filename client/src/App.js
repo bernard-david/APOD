@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Router>
         <Home path="/"/>
-        <NasaPhoto path="nasaphoto"/>
+        <NasaPhoto path="/nasaimage"/>
       </Router>
     </div>
   );
