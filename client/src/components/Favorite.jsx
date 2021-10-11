@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { navigate } from '@reach/router';
 
@@ -13,6 +13,10 @@ const Favorite = props => {
         media_type: "",
         title: "",
     })
+
+    useEffect(() => {
+        setForm(data)
+    }, [])
 
     const submitHandler = e => {
         e.preventDefault()
@@ -31,7 +35,7 @@ const Favorite = props => {
     return (
         <div>
             <form onSubmit={submitHandler}>
-                <input type="hidden" name="copyright" value={data.copyright} />
+                <input type="hidden" name="copyright" value={data.copyright}/>
                 <input type="hidden" name="date" value={data.date}/>
                 <input type="hidden" name="explanation" value={data.explanation}/>
                 <input type="hidden" name="hdurl" value={data.hdurl}/>

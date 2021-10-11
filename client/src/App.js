@@ -1,9 +1,10 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Router } from '@reach/router';
-import Home from './components/Home';
+import Home from './views/Home';
 import NasaPhoto from './components/NasaPhoto';
 import Navbar from './components/Navbar';
+import AllFavorites from './views/AllFavorites';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Home path="/"/>
         <NasaPhoto path="/nasaimage"/>
+        <AllFavorites path="/favorites"/>
       </Router>
     </div>
   );
