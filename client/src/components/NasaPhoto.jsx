@@ -9,7 +9,7 @@ const NasaPhoto = props => {
     const [nasaData, setNasaData] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&thumbs=True`)
             .then(res => {
                 setNasaData(res.data);
                 console.log(res.data);

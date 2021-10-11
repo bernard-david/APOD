@@ -10,13 +10,14 @@ const Favorite = props => {
         date: "",
         explanation: "",
         hdurl: "",
+        thumbnail: "",
         media_type: "",
         title: "",
     })
 
     useEffect(() => {
         setForm(data)
-    }, [])
+    }, [data])
 
     const submitHandler = e => {
         e.preventDefault()

@@ -1,15 +1,22 @@
 import React from "react";
+import axios from "axios";
 
 const AllFavorites = props => {
     const {favorite} = props;
 
+    const deleteFavorite = _id => {
+        axios.delete(`http://localhost:8000/api/nasaimages/delete/${_id}`)
+            .then(() => props.update())
+            .catch(err => console.log(err))
+    }
+
     return (
-        <div class="card" style={{width: "18rem"}}>
-            {favorite.media_type === "image" ? <img class="card-img-top" src={favorite.url} alt={favorite.title} /> : <iframe title="space-video" src={favorite.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen/>}
-            <div class="card-body">
-                <h5 class="card-title">{favorite.title}</h5>
-                <p class="card-text">{favorite.date}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div className="card mb-3" style={{width: "18rem"}}>
+            {favorite.media_type === "image" ? <img className="card-img-top" src={favorite.url} alt={favorite.title} /> : <img className="card-img-top" src={favorite.thumbnail} alt={favorite.title}/>}
+            <div className="card-body">
+                <h5 className="card-title">{favorite.title}</h5>
+                <p className="card-text">{favorite.date}</p>
+                <button className="btn btn-info me-3" onClick={() => deleteFavorite(favorite._id)}>UnFavorite</button>
             </div>
         </div>
     )

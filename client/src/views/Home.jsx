@@ -11,17 +11,24 @@ const Home = props => {
         axios.get("http://localhost:8000/api/nasaimages")
             .then(res => setFavorites(res.data))
             .catch(err => console.log(err))
-    }, [])
+    }, [resetAPI])
+
+    const update = () => {
+        setResetAPI(!resetAPI);
+    }
 
     return (
         <div>
-            <Link to="/nasaimage"><button className="btn btn-primary">See the Photo!</button></Link>
-            {
-                favorites ? 
-                favorites.map((favorite) => {
-                    return <AllFavorites favorite={favorite}/>
-                }) : ""
-            }
+            <Link to="/nasaimage"><button className="btn btn-primary">Today's Image</button></Link>
+            <div className="container d-flex flex-wrap justify-content-start gap-3 mt-3">
+                {
+                    favorites ? 
+                    favorites.map((favorite) => {
+                        return <AllFavorites favorite={favorite} update={update}/>
+                    }) : ""
+                }
+            </div>
+            
         </div>
     )
 }

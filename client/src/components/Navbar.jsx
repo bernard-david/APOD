@@ -6,8 +6,6 @@ const Navbar = props => {
     return (
         <div>
             <Link to="/">Home Page</Link>
-            <br />
-            <Link to="/favorites">Favorites</Link>
         </div>
         
     )

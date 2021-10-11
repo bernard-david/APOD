@@ -13,6 +13,9 @@ const NasaImageSchema = mongoose.Schema({
     hdurl: {
         type: String
     },
+    thumbnail: {
+        type: String
+    },
     media_type: {
         type: String
     },
