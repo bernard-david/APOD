@@ -16,7 +16,14 @@ module.exports.findAllNasaImages = (req, res) => {
 
 //Get One
 module.exports.findOneNasaImage = (req, res) => {
-    Pirate.findOne({_id: req.params._id})
+    NasaImage.findOne({_id: req.params._id})
         .then(oneNasaImage => res.json(oneNasaImage))
         .catch(err => res.json({message: "Something went wrong when getting one NasaImage!!", error: err}))
+}
+
+//Delete
+module.exports.deleteOneNasaImage = (req, res) => {
+    NasaImage.deleteOne({_id: req.params._id})
+        .then(oneNasaImage => res.json(oneNasaImage))
+        .catch(err => res.json({message: "Something went wrong when deleting a NasaImage!!", error: err}))
 }

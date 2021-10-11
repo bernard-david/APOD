@@ -7,4 +7,6 @@ module.exports = app => {
     app.get('/api/nasaimages', NasaImageController.findAllNasaImages);
     //GET ONE
     app.get('/api/nasaimages/:_id', NasaImageController.findOneNasaImage);
+    //DELETE
+    app.delete('/api/nasaimages/delete/:_id', NasaImageController.deleteOneNasaImage);
 }
