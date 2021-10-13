@@ -18,9 +18,12 @@ const Home = props => {
     }
 
     return (
-        <div>
-            <Link to="/nasaimage"><button className="btn btn-primary">Today's Image</button></Link>
-            <div className="container d-flex flex-wrap justify-content-start gap-3 mt-3">
+        <div className="container">
+            <div className="d-flex gap-3 justify-content-center">
+                <Link to="/nasaimage"><button className="btn btn-primary">Today's Image</button></Link>
+                <Link to="/randomimage"><button className="btn btn-primary">Random Image</button></Link>
+            </div>
+            <div className="d-flex flex-wrap justify-content-start gap-3 mt-3">
                 {
                     favorites ? 
                     favorites.map((favorite) => {

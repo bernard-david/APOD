@@ -4,6 +4,7 @@ import { Router } from '@reach/router';
 import Home from './views/Home';
 import NasaPhoto from './views/NasaPhoto';
 import Navbar from './components/Navbar';
+import RandomPhoto from './views/RandomPhoto';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Home path="/"/>
         <NasaPhoto path="/nasaimage"/>
+        <RandomPhoto path="/randomimage"/>
       </Router>
     </div>
   );
