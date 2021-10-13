@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Router } from '@reach/router';
 import Home from './views/Home';
-import NasaPhoto from './components/NasaPhoto';
+import NasaPhoto from './views/NasaPhoto';
 import Navbar from './components/Navbar';
 
 function App() {

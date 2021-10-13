@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import Favorite from "./Favorite";
+import Favorite from "../components/Favorite";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 

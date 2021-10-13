@@ -40,6 +40,7 @@ const Favorite = props => {
                 <input type="hidden" name="date" value={data.date}/>
                 <input type="hidden" name="explanation" value={data.explanation}/>
                 <input type="hidden" name="hdurl" value={data.hdurl}/>
+                <input type="hidden" name="hdurl" value={data.thumbnail}/>
                 <input type="hidden" name="media_type" value={data.media_type}/>
                 <input type="hidden" name="title" value={data.title}/>
                 <button className="btn btn-primary">Favorite</button>

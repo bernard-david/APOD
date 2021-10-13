@@ -11,8 +11,8 @@ const AllFavorites = props => {
     }
 
     return (
-        <div className="card mb-3" style={{width: "18rem"}}>
-            {favorite.media_type === "image" ? <img className="card-img-top" src={favorite.url} alt={favorite.title} /> : <img className="card-img-top" src={favorite.thumbnail} alt={favorite.title}/>}
+        <div className="card mb-3" style={{width: "18em"}}>
+            {favorite.media_type === "image" ? <img className="card-img-top" style={{maxHeight: "20em"}} src={favorite.hdurl} alt={favorite.title} /> : <img className="card-img-top" src={favorite.thumbnail} alt={favorite.title}/>}
             <div className="card-body">
                 <h5 className="card-title">{favorite.title}</h5>
                 <p className="card-text">{favorite.date}</p>
