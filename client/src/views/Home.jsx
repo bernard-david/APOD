@@ -19,11 +19,11 @@ const Home = props => {
 
     return (
         <div className="container">
-            <div className="d-flex gap-3 justify-content-center">
-                <Link to="/nasaimage"><button className="btn btn-primary">Today's Image</button></Link>
-                <Link to="/randomimage"><button className="btn btn-primary">Random Image</button></Link>
+            <div className="welcome">
+                <h2>Favorited Images</h2>
+                <p>All data is taken directly from the NASA API and is only used for project purposes. Please feel free to click around the website!</p>
             </div>
-            <div className="d-flex flex-wrap justify-content-start gap-3 mt-3">
+            <div className="d-flex flex-wrap justify-content-center gap-3 mt-3">
                 {
                     favorites ? 
                     favorites.map((favorite) => {

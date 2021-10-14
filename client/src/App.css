@@ -75,6 +75,13 @@ body {
   background-color: rgba(223,224,226,.6);
 }
 
+/* Home page */
+
+.welcome {
+  margin-top: 1em;
+  color: rgba(223,224,226,1);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

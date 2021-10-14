@@ -27,7 +27,7 @@ const Favorite = props => {
                     console.log("There's an error!");
                 } else {
                     console.log("No errors here!");
-                    // navigate("/nasaimage");
+                    navigate("/");
                 }
             })
             .catch(err => console.log(err))
