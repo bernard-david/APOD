@@ -1,5 +1,7 @@
+//import the controller
 const NasaImageController = require("../controllers/nasaImage.controller")
 
+//utilize RESTful routing
 module.exports = app => {
     //CREATE
     app.post('/api/nasaimages/create', NasaImageController.createNasaImage);

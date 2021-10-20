@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Creates the Schema for favoriting an image from Nasa. This matches the json response from the NASA API and stored in a similar format using strings
 const NasaImageSchema = mongoose.Schema({
     copyright: {
         type: String
@@ -24,5 +25,6 @@ const NasaImageSchema = mongoose.Schema({
     },
 }, {timestamps: true})
 
+//exports the model to use in the controller
 const NasaImage = mongoose.model("NasaImage", NasaImageSchema);
 module.exports = NasaImage;

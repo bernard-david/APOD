@@ -1,3 +1,4 @@
+//import model
 const NasaImage = require("../models/nasaImage.model")
 
 //Create

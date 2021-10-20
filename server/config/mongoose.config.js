@@ -1,3 +1,4 @@
+// Setup connection to mongodb using mongoose
 const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost/apod", {

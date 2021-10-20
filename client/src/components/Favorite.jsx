@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { navigate } from '@reach/router';
 
+// This file is the form that saves an image from the Nasa API into the database
+
 const Favorite = props => {
+    //destructure data coming in from the component that Favorite is exported in
     const {data} = props
 
+    //base structure of the form
     const [form, setForm] = useState({
         copyright: "",
         date: "",
@@ -15,10 +19,12 @@ const Favorite = props => {
         title: "",
     })
 
+    //utilize useEffect inorder to prepopulate form with empty strings
     useEffect(() => {
         setForm(data)
     }, [data])
 
+    //handles the saving of the Nasa image data, redirects to home page
     const submitHandler = e => {
         e.preventDefault()
         axios.post('http://localhost:8000/api/nasaimages/create', form)
@@ -33,6 +39,7 @@ const Favorite = props => {
             .catch(err => console.log(err))
     }
 
+    //returns a button with hidden inputs containing the data from Nasa 
     return (
         <div>
             <form onSubmit={submitHandler}>

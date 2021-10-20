@@ -10,7 +10,9 @@ import OnePhoto from './views/OnePhoto';
 function App() {
   return (
     <div className="App">
+      {/* Insert Navbar here so that it is displayed throughou the app */}
       <Navbar/>
+      {/* Setup Router to have a clickable site between pages */}
       <Router>
         <Home path="/"/>
         <NasaPhoto path="/nasaimage"/>

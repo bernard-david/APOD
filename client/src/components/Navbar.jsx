@@ -1,6 +1,7 @@
 import { Link } from "@reach/router";
 import React from "react";
 
+//Navbar for a consitent header across the app, utilizes Bootstrap for quick and easy styling 
 
 const Navbar = props => {
     return (
