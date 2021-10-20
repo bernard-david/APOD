@@ -26,7 +26,7 @@ const NasaPhoto = props => {
                 <div className="content">
                     <h1>{nasaData.title}</h1>
                     <p className="date">{nasaData.date}</p>
-                    <p>Copyright: {nasaData.copyright}</p>
+                    <p>Copyright: {nasaData.copyright ? nasaData.copyright : "Unknown"}</p>
                     <p className="explanation">{nasaData.explanation}</p>
                     <Favorite data={nasaData}/>
                 </div>

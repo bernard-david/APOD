@@ -24,7 +24,7 @@ const OnePhoto = props => {
                 <div className="content">
                     <h1>{apiData.title}</h1>
                     <p className="date">{apiData.date}</p>
-                    <p>Copyright: {apiData.copyright}</p>
+                    <p>Copyright: {apiData.copyright ? apiData.copyright : "Unknown"}</p>
                     <p className="explanation">{apiData.explanation}</p>
                     <Favorite data={apiData}/>
                 </div>
