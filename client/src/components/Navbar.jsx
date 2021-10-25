@@ -5,7 +5,7 @@ import React from "react";
 
 const Navbar = props => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "rgba(223,224,226,.6)"}}>
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light" style={{backgroundColor: "rgba(223,224,226,.6)"}}>
             <div className="container ps-5">
                 <span className="navbar-brand mb-0 h1">APOD (Astronomy Picture of the Day)</span>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
