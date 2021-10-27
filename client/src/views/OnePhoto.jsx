@@ -25,7 +25,7 @@ const OnePhoto = props => {
             apiData ? 
             <div className="nasa-photo">
                 {/* checks to see if there is an image or video in the json data and returns appropriate styling */}
-                {apiData.media_type === "image" ? <img src={apiData.hdurl} alt={apiData.title} /> : <iframe title="space-video" src={apiData.hdurl} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen/>}
+                {apiData.media_type === "image" ? <img src={apiData.url} alt={apiData.title} /> : <iframe title="space-video" src={apiData.url} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen/>}
                 <div className="content">
                     <h1>{apiData.title}</h1>
                     <p className="date">{apiData.date}</p>

@@ -18,7 +18,7 @@ const AllFavorites = props => {
     //returns the styling and structure for one single image card to be displayed on the home page
     return (
         <div className="card mb-3" id="favorite" style={{width: "18em"}}>
-            {favorite.media_type === "image" ? <img className="card-img-top" style={{maxHeight: "20em", objectFit: "contain"}} src={favorite.hdurl} alt={favorite.title} /> : <img className="card-img-top" src={favorite.thumbnail} alt={favorite.title}/>}
+            {favorite.media_type === "image" ? <img className="card-img-top" style={{maxHeight: "20em", objectFit: "contain"}} src={favorite.url} alt={favorite.title} /> : <img className="card-img-top" src={favorite.thumbnail_url} alt={favorite.title}/>}
             <div className="card-body">
                 <h5 className="card-title">{favorite.title}</h5>
                 <p className="card-text">{favorite.date}</p>

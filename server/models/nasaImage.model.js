@@ -11,10 +11,10 @@ const NasaImageSchema = mongoose.Schema({
     explanation: {
         type: String
     },
-    hdurl: {
+    url: {
         type: String
     },
-    thumbnail: {
+    thumbnail_url: {
         type: String
     },
     media_type: {

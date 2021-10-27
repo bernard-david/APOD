@@ -13,8 +13,8 @@ const Favorite = props => {
         copyright: "",
         date: "",
         explanation: "",
-        hdurl: "",
-        thumbnail: "",
+        url: "",
+        thumbnail_url: "",
         media_type: "",
         title: "",
     })
@@ -46,8 +46,8 @@ const Favorite = props => {
                 <input type="hidden" name="copyright" value={data.copyright}/>
                 <input type="hidden" name="date" value={data.date}/>
                 <input type="hidden" name="explanation" value={data.explanation}/>
-                <input type="hidden" name="hdurl" value={data.hdurl}/>
-                <input type="hidden" name="hdurl" value={data.thumbnail}/>
+                <input type="hidden" name="url" value={data.url}/>
+                <input type="hidden" name="thumbnail_url" value={data.thumbnail_url}/>
                 <input type="hidden" name="media_type" value={data.media_type}/>
                 <input type="hidden" name="title" value={data.title}/>
                 <button className="btn btn-primary">Favorite</button>
